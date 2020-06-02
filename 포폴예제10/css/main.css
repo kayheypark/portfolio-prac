@@ -1,0 +1,83 @@
+@import url(reset.css);
+/* main.css */
+body{font-family: '돋움',dotum,sans-serif,;font-size: 12px;color: #000;}
+a{color: #666;text-decoration: none;}
+
+/* gnb */
+.gnb{z-index: 100;position: fixed;width: 100%;border-bottom: 2px solid #ddd;
+background: #fff;}
+.gnb li{float: left;width: 25%;border-right:1px solid #ddd;box-sizing: border-box;}
+.gnb li a{display: block;padding: 10px 0;text-align: center;}
+.gnb li a.on{border-bottom: 4px solid #333;}
+.gnb li a:focus{background: #eee;color: #000;}
+
+
+/* container */
+#container{z-index: 30;position: relative;top: 38px;}
+#container > div{width: 100%;/*height: 740px;*/font-size: 100px;color: #fff;}
+#container > div:nth-of-type(1){background: #ff0000;}
+#container > div:nth-of-type(2){background: #00ff00;}
+#container > div:nth-of-type(3){background: #0000ff;}
+#container > div:nth-of-type(4){background: #ff6600;}
+
+#container > div > section{position: relative;}
+#container > div > section > span{display: block;text-align: left;}
+
+/* quick */
+.quick{z-index: 40;position: absolute;right: 0;width: 150px;background: #fff;}
+.quick li a{display: block;padding: 8px 0;border-bottom: 1px solid #ccc;text-align: center;}
+.quick li a:hover,.quick li a:focus{background: #eee;color: #000;}
+.quick li a.on{background: #666;color: #fff;}
+
+/* content1 */
+#content1 > section > h2{position: absolute;left: 0;top: 0;
+                         opacity: 0;transition: all 1s ease-in-out 0s;}
+#content1 > section > span:nth-of-type(1){position: absolute;left: 0;top: 100px;
+                                          opacity: 0;transition: all 1s ease-in-out 0.5s;}
+#content1 > section > span:nth-of-type(2){transform: translateY(0);opacity: 0;transition: all 1s ease-in-out 1s;}
+#content1 > section > span:nth-of-type(3){transform: translateY(0);opacity: 0;transition: all 1s ease-in-out 1.5s;}
+
+#content1 > section.on > h2{top: 100px;opacity: 1;}
+#content1 > section.on > span:nth-of-type(1){top: 200px;opacity: 1;}
+#content1 > section.on > span:nth-of-type(2){transform: translateY(300px);opacity: 1;}
+#content1 > section.on > span:nth-of-type(3){transform: translateY(300px);opacity: 1;}
+
+/* content2 */
+#content2 > section > h2{position: absolute;left: -100px;top: 100px;
+    opacity: 0;transition: all 1s ease-in-out 0s;}
+#content2 > section > span:nth-of-type(1){position: absolute;left: -100px;top: 200px;
+                     opacity: 0;transition: all 1s ease-in-out 0.5s;}
+#content2 > section > span:nth-of-type(2){position: absolute;top: 300px;left: -100px;opacity: 0;transition: all 1s ease-in-out 1s;}
+#content2 > section > span:nth-of-type(3){transform: translateY(1000px);opacity: 0;transition: all 1s ease-in-out 1.5s;}
+
+#content2 > section.on > h2{left:0;opacity: 1;}
+#content2 > section.on > span:nth-of-type(1){left: 0;opacity: 1;}
+#content2 > section.on > span:nth-of-type(2){left: 0;opacity: 1;}
+#content2 > section.on > span:nth-of-type(3){transform: translateY(400px);opacity: 1;}
+
+/* content3 */
+#content3 > section > h2{position: absolute;left: 0;top: 0;
+    opacity: 0;transition: all 1s ease-in-out 0s;}
+#content3 > section > span:nth-of-type(1){position: absolute;left: 0;top: 100px;
+                     opacity: 0;transition: all 1s ease-in-out 0.5s;}
+#content3 > section > span:nth-of-type(2){transform: translateY(0);opacity: 0;transition: all 1s ease-in-out 1s;}
+#content3 > section > span:nth-of-type(3){transform: translateY(0);opacity: 0;transition: all 1s ease-in-out 1.5s;}
+
+#content3 > section.on > h2{top: 100px;opacity: 1;}
+#content3 > section.on > span:nth-of-type(1){top: 200px;opacity: 1;}
+#content3 > section.on > span:nth-of-type(2){transform: translateY(300px);opacity: 1;}
+#content3 > section.on > span:nth-of-type(3){transform: translateY(300px);opacity: 1;}
+
+/* content4 */
+#content4 > section > h2{position: absolute;left: 0;top: 0;
+    opacity: 0;transition: all 1s ease-in-out 0s;}
+#content4 > section > span:nth-of-type(1){position: absolute;left: 0;top: 100px;
+                     opacity: 0;transition: all 1s ease-in-out 0.5s;}
+#content4 > section > span:nth-of-type(2){transform: translateY(0);opacity: 0;transition: all 1s ease-in-out 1s;}
+#content4 > section > span:nth-of-type(3){transform: translateY(0);opacity: 0;transition: all 1s ease-in-out 1.5s;}
+
+#content4 > section.on > h2{top: 100px;opacity: 1;}
+#content4 > section.on > span:nth-of-type(1){top: 200px;opacity: 1;}
+#content4 > section.on > span:nth-of-type(2){transform: translateY(300px);opacity: 1;}
+#content4 > section.on > span:nth-of-type(3){transform: translateY(300px);opacity: 1;}
+        

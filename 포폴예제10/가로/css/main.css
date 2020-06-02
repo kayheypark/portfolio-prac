@@ -1,0 +1,175 @@
+@import url(reset.css);
+/* main.css */
+
+body {font-family: "돋움", Dotum, sans-serif; font-size: 12px; color: #000;}
+a {color: $666; text-decoration: none;}
+
+/* 움직이는 캐릭터 */
+.character {z-index: 10; position: fixed; left: 50%; bottom: 50px; transform: translateX(-50%);
+            width: 155px; height: 176px; background-image: url(../img/right.png);}
+
+.character.left {background-image: url(../img/left.png);}
+.character.on{animation: walk 0.5s steps(3, start) infinite;}
+
+@keyframes walk {
+    from {background-position: 0 0;}
+    to {background-position: -465px 0;}
+}
+
+/*
+vw : viewport width 를 뜻한다.
+vh : vhiewport heingt
+*/
+
+#container {position: fixed; width: 1000vw; height: 100vw; background: #00f; font-size: 50px; color: #fff;}
+
+#container > div {float: left; width: 100vw; height: 100vw;
+background-color: rgba(255, 0, 0, 0.4);}
+
+#container > div > section {position: relative;}
+#container > div > section > span {display: block;text-align: left;}
+
+/* cnotent1 */
+#content1 > section > h2 {}
+
+/* content 1~10 애니메이션 */
+/*content1*/
+#content1 > section > h2 {}
+#content1 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content1 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content1 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content1 > section.on > h2 {}
+#content1 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content1 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content1 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content2*/
+#content2 > section > h2 {}
+#content2 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content2 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content2 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content2 > section.on > h2 {}
+#content2 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content2 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content2 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content3*/
+#content3 > section > h2 {}
+#content3 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content3 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content3 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content3 > section.on > h2 {}
+#content3 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content3 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content3 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content4*/
+#content4 > section > h2 {}
+#content4 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content4 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content4 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content4 > section.on > h2 {}
+#content4 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content4 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content4 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content5*/
+#content5 > section > h2 {}
+#content5 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content5 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content5 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content5 > section.on > h2 {}
+#content5 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content5 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content5 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content6*/
+#content6 > section > h2 {}
+#content6 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content6 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content6 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content6 > section.on > h2 {}
+#content6 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content6 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content6 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content7*/
+#content7 > section > h2 {}
+#content7 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content7 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content7 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content7 > section.on > h2 {}
+#content7 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content7 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content7 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content8*/
+#content8 > section > h2 {}
+#content8 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content8 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content8 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content8 > section.on > h2 {}
+#content8 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content8 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content8 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content9*/
+#content9 > section > h2 {}
+#content9 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content9 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content9 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content9 > section.on > h2 {}
+#content9 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content9 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content9 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+
+/*content10*/
+#content10 > section > h2 {}
+#content10 > section > span:nth-of-type(1) {position: absolute; left: 0; top: 100px;
+                                            opacity: 0; transition: all 1s ease-in-out 0.5s;}
+#content10 > section > span:nth-of-type(2) {transform: translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1s;}
+#content10 > section > span:nth-of-type(3) {transfrom:translateY(0); opacity: 0;
+                                            transition: all 1s ease-in-out 1.5s;}
+
+#content10 > section.on > h2 {}
+#content10 > section.on > span:nth-of-type(1) {top: 200px; opacity: 1;}
+#content10 > section.on > span:nth-of-type(2) {transform: translateY(300px); opacity: 1;}
+#content10 > section.on > span:nth-of-type(3) {transform: translateY(300px); opacity: 1;}
+

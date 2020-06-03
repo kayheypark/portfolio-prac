@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자효과</title>
+    <style>
+        section{position:relative;width:100%;height:700px;background:#f00;}
+        .text{position:absolute;left:0;width:50%;padding:5% 13% 5% 6%; font-family:'Open Sans',sans-serif;background:#000;color:#fff;box-sizing:border-box;border:1px solid red;}
+        .img{opacity:1;position:absolute;right:0;top:50%;width:50%;transform:translateY(-50%); text-align:right;}
+        .img:before{content:"";position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(255,255,255,0.7);transform:scaleX(0);}
+        .img:after{content:"";position:absolute;right:0;top:0;width:100%;height:100%;background: rgba(21,170,251,0.5);transform:scaleX(0);}
+        section.on > .img:before{animation: ani2 0.3s cubic-bezier(0.87,0.02,0,0.97) 0.2s forwards;}
+        section.on > .img:after{animation:ani3 0.3s cubic-bezier(0.87,0.02,0,0.97) 0.6s forwards;}
+        .text > h3{position:relative;opacity:0;display:inline-block;padding:0 2px;margin-bottom:13%;font-size:48px;font-weight:600;letter-spacing:-2px;background:rgba(21,170,251,0.5)}
+        .text > h3:before{content:"";position:absolute;left:0;top:0;width:100%;height:100%;background:#15aafb;transform:scaleX(0);}
+        section.on > .text > h3{animation: ani1 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.2s forwards;}
+        section.on > .text > h3:before{animation: ani2 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.2s forwards;;}
+
+        
+        @keyframes ani1{
+            0%{opacity:0}
+            50%{opacity:0}
+            51%{opacity:1}
+            100%{opacity:1}
+        }
+        @keyframes ani2{
+            0%{transform-origin: left;transform:scaleX(0);}
+            50%{transform-origin:left;transform:scaleX(1);}
+            51%{transform-origin:right;transform: scaleX(1);}
+            100%{transform-origin:right;transform:scaleX(0)}
+        }
+        @keyframes ani3{
+            0%{transform-origin: right;transform:scaleX(0);}
+            50%{transform-origin:right;transform:scaleX(1);}
+            51%{transform-origin:left;transform: scaleX(1);}
+            100%{transform-origin:left;transform:scaleX(0)}
+        }
+        
+        .text > p{position:relative;opacity:0; margin-bottom:13%;font-size:18px;}
+        .text > p:before{content:"";position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(255,255,255,0.7);transform:scaleX(0);}
+        section.on > .text > p{animation: ani1 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.5s forwards;}
+        section.on > .text > p:before{animation: ani2 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.5s forwards;}
+        .text > a{position:relative;opacity:0; display:inline-block;width:140px;height:52px;border:1px solid #11aafb;
+                border-image-source: linear-gradient(to right,#fff,#11aafb);border-image-slice: 1;
+                color:#fff;text-decoration:none;font-size:18px;line-height:52px;text-align:center; overflow:hidden;z-index:10;
+                transition:all 0.1s linear 0s;   
+        }
+        .text > a > .hover{position:absolute;left:-150%;top:0;width:100%;height:100%;background: linear-gradient(45deg,#fff,#11aafb);transition:all 0.1s linear 0s;}
+        .text > a:hover > .hover{left:0;z-index:-1}
+        .text > a:hover{color:#000;}
+        .text > a:before{content:"";position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(45deg,#fff,#11aafb);transform:scaleX(0);}
+        section.on > .text > a{animation: ani1 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.8s forwards;}
+        section.on > .text > a:before{animation: ani2 0.6s cubic-bezier(0.87,0.02,0,0.97) 0.8s forwards;}
+    </style>
+</head>
+<body>
+    <div id="content1">
+        <section class="on">
+            <div class="text">
+                <h3>Lorem Ipsum</h3>
+                <p><span></span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <a href="#">more view <div class="hover"></div></a>
+            </div>
+            <div class="img"><img src="image.png" alt="/"></div>
+        </section>
+    </div>
+</body>
+</html>
